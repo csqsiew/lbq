@@ -1,0 +1,13 @@
+name: warwick_lbq_pat
+title: warwick_lbq_pat
+username:
+account: csqsiew
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 327395
+bundleId: 1341624
+url: https://csqsiew.shinyapps.io/warwick_lbq_pat/
+when: 1524776164.63284
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .RData|lbq_draft.xlsx|lbq_edits.docx|lbq2.docx|archived/app.R|archived/changepagevariable2.R|archived/createpage2.R|archived/language_4 copy.csv|archived/language_4_2 copy 2.csv|archived/language_4_2 copy.csv|archived/language_4_2.csv|archived/language_4.csv|archived/lbq.xlsx|archived/Placeholder.txt|archived/test.csv|archived/test.txt|archived/test.xlsx|archived/test1.txt|archived/test2.txt|archived/test3.txt|archived/test4.txt
