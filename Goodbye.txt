@@ -1,2 +1,8 @@
-id	text	page	type	choices	choiceNames	reverse	placeholder	min	max	disabled	checkType	width	height	inline	randomizeNA	Thank you for completing the survey.	1	h4	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0NA	Please click on the following link to continue.	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0NA	<a href="https://warwickpsych.qualtrics.com/jfe/form/SV_3kmMZtw58hfjUxf" target="_blank">Link</a>	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0NA	"<br>"	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0NA	"<br>"	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0NA	<p style="color:red;">Please use the same Participant ID number for the next part of the study. Your ID number is</p>	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0NA	id_code	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
-
+id	text	page	type	choices	choiceNames	reverse	placeholder	min	max	disabled	checkType	width	height	inline	randomize
+NA	Thank you for completing the survey.	1	h4	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	Please click on the following link to continue.	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	INSERT LINK	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	"<br>"	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	"<br>"	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	<p style="color:red;">Please use the same Participant ID number for the next part of the study. Your ID number is</p>	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	id_code	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0

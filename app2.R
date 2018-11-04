@@ -1,3 +1,6 @@
+# warwick version: https://csqsiew.shinyapps.io/warwick_lbq_pat/ 
+# city u version: https://csqsiew.shinyapps.io/lbq 
+
 # Example of a Survey using the ShinyPsych package
 #
 # Code sections:
@@ -22,10 +25,10 @@ library(stringr)
 # Section A: assign external values ============================================
 
 # Dropbox directory to save data
-outputDir <- "ShinyPsych/warwick_nndata"
+outputDir <- "ShinyPsych/lbq"
 
 # Vector with page ids used to later access objects
-idsVec <- c("Instructions", "Survey", "Demographics", "Goodbye") 
+idsVec <- c("Instructions", "Survey", "Demographics", "Pregoodbye", "Goodbye") 
 
 # create page lists for the instructions and the last page
 instructions.list <- createPageList(fileName = "Instruction.txt",
@@ -37,6 +40,8 @@ demographics.list <- createPageList(fileName = "Language2_1.txt", globId = 'Demo
 demographics.list2 <- createPageList(fileName = "Language2_2.txt", globId = 'Demographics', defaulttxt = F)
 demographics.list3 <- createPageList(fileName = "Language2_3.txt", globId = 'Demographics', defaulttxt = F)
 demographics.list4 <- createPageList(fileName = "Language2_4.txt", globId = 'Demographics', defaulttxt = F)
+
+pregoodbye.list <- createPageList(fileName = "Pregoodbye.txt",  globId = 'Pregoodbye', defaulttxt = F)
 
 goodbye.list <- createPageList(fileName = "Goodbye.txt",  globId = 'Goodbye', defaulttxt = F)
 
@@ -141,8 +146,8 @@ server <- function(input, output, session) {
       return(
         # create html logic of instructions page
         createPage(pageList = pregoodbye.list,
-                   pageNumber = CurrentValues$PreGoodbye.num,
-                   globId = "PreGoodbye", ctrlVals = CurrentValues)
+                   pageNumber = CurrentValues$Pregoodbye.num,
+                   globId = "Pregoodbye", ctrlVals = CurrentValues)
       )}
     
     goodbye.list <- changePageVariable(pageList = goodbye.list, variable = 'text',
@@ -176,6 +181,13 @@ server <- function(input, output, session) {
              globId = "Survey")
   })
   
+  observeEvent(input[["Demographics_next"]],{
+    nextPage(pageId = "Demographics", ctrlVals = CurrentValues,
+             nextPageId = "Pregoodbye", pageList = demographics.list,
+             globId = "Demographics")
+  })
+  
+
   # Section F2: Event Control ----------------------
   
   
@@ -207,7 +219,7 @@ server <- function(input, output, session) {
   
   # Section G: Save data =========================================================
   
-  observeEvent(input[["Demographics_next"]], {(
+  observeEvent(input[["Pregoodbye_next"]], {(
     
     # Create progress message
     withProgress(message = "Saving data...", value = 0, {
