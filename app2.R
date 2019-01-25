@@ -1,5 +1,5 @@
 # warwick version: https://csqsiew.shinyapps.io/warwick_lbq_pat/ 
-# city u version: https://csqsiew.shinyapps.io/lbq 
+# city u version: https://csqsiew.shinyapps.io/lbq_v1 
 
 # Example of a Survey using the ShinyPsych package
 #
@@ -28,7 +28,9 @@ library(stringr)
 outputDir <- "ShinyPsych/lbq"
 
 # Vector with page ids used to later access objects
-idsVec <- c("Instructions", "Survey", "Demographics", "Pregoodbye", "Goodbye") 
+idsVec <- c("Consent", "Instructions", "Survey", "Demographics", "Pregoodbye", "Goodbye") 
+
+consent.list <- createPageList(fileName = "consent.txt", globId = 'Consent', defaulttxt = F)
 
 # create page lists for the instructions and the last page
 instructions.list <- createPageList(fileName = "Instruction.txt",
@@ -51,7 +53,7 @@ goodbye.list <- createPageList(fileName = "Goodbye.txt",  globId = 'Goodbye', de
 ui <- fixedPage(
   
   # App title
-  title = "LBQ",
+  title = "Psychology Study",
   uiOutput("MainAction"),
   
   # For Shinyjs functions
@@ -72,7 +74,7 @@ server <- function(input, output, session) {
   # Section C: Define Reactive Values ==========================================
   
   # CurrentValues controls page setting such as which page to display
-  CurrentValues <- createCtrlList(firstPage = "Instructions", # id of the first page
+  CurrentValues <- createCtrlList(firstPage = "Consent", # id of the first page
                                   globIds = idsVec,           # ids of pages for createPage
                                   complCode = F) #,           # create a completion code
   # complName = "Survey")    # first element of completion code
@@ -85,6 +87,15 @@ server <- function(input, output, session) {
     #goodbye.list <- changePageVariable(pageList = goodbye.list, variable = "text",
     #                                   oldLabel = "completion.code",
     #                                   newLabel = CurrentValues$completion.code)
+    
+    if (CurrentValues$page == "Consent") {
+      
+      return(
+        # create html logic of instructions page
+        createPage(pageList = consent.list,
+                   pageNumber = CurrentValues$Consent.num,
+                   globId = "Consent", ctrlVals = CurrentValues)
+      )}
     
     # display instructions page
     if (CurrentValues$page == "Instructions") {
@@ -150,9 +161,10 @@ server <- function(input, output, session) {
                    globId = "Pregoodbye", ctrlVals = CurrentValues)
       )}
     
+    # 
     goodbye.list <- changePageVariable(pageList = goodbye.list, variable = 'text',
-                                            oldLabel = 'id_code', 
-                                       newLabel = input$Survey_partid)
+                                            oldLabel = 'id_code2',
+                                       newLabel = input$Instructions_partid)
     
     # P5) Goodbye
     if (CurrentValues$page == "Goodbye") {
@@ -169,6 +181,10 @@ server <- function(input, output, session) {
   
   # Section F1: Page Navigation Buttons ----------------------
   
+  observeEvent(input[["Consent_next"]],{
+    nextPage(pageId = "Consent", ctrlVals = CurrentValues, nextPageId = "Instructions",
+             pageList = consent.list, globId = "Consent")
+  })
   
   observeEvent(input[["Instructions_next"]],{
     nextPage(pageId = "Instructions", ctrlVals = CurrentValues, nextPageId = "Survey",
@@ -193,6 +209,10 @@ server <- function(input, output, session) {
   
   # Make sure answers are selected
   observeEvent(reactiveValuesToList(input),{
+    
+    onInputEnable(pageId = "Consent", ctrlVals = CurrentValues,
+                  pageList = consent.list, globId = "Consent",
+                  inputList = input, charNum = 1)
     
     onInputEnable(pageId = "Instructions", ctrlVals = CurrentValues,
                   pageList = instructions.list, globId = "Instructions",
@@ -230,7 +250,7 @@ server <- function(input, output, session) {
       data.list <- list(  
         #"id" = input$Instructions_workerid,
         #"code" = completion.code,
-        "partid" = input$Survey_partid,
+        "partid" = input$Instructions_partid,
         "age" = input$Survey_age,
         "gender" = input$Survey_gender,
         "edu" = input$Survey_edu,
@@ -281,7 +301,7 @@ server <- function(input, output, session) {
       )
       
       saveData(data.list, location = "dropbox", outputDir = outputDir,
-               partId = 'LBQ_')
+               partId = 'LBQ_Jan2019_')
       
       CurrentValues$page <- "Goodbye"
       

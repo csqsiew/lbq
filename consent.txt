@@ -1,0 +1,41 @@
+id	text	page	type	choices	choiceNames	reverse	placeholder	min	max	disabled	checkType	width	height	inline	randomize
+NA	Identification of Investigators & Purpose of Study	1	h4	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	You are being asked to participate in a research study conducted by Dr. Kit Ying (Vivien) Chan from the City University of Hong Kong, Dr. Cynthia Siew from the University of Warwick and the National University of Singapore, and Dr. Nichol Castro from the University of Washington. 	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	The purpose of this study is to construct a phonological network for second language (L2) learners. By analyzing the phonological network of L2 learners, we can gain a better understanding on why L2 learners cannot attain native level of language proficiency. This study will contribute to the researcher’s continuous research work. 	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	<br>	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	Research Procedures	1	h4	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	In this study, you will be filling in a brief online questionnaire about your language background and participating in a verbal fluency task and a lexical decision task. 	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	In the verbal fluency task, you will hear a word through the headphones and see the same word on the computer screen and then will have to type in 3 words that are similar sounding to the given word.	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	In the lexical decision task, you will hear a stimulus and you will determine if it is a word or not.	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	<br>	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	Time Required	1	h4	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	Participation in this study will require 30 minutes of your time.	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	<br>	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	Risks	1	h4	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	The investigator does not perceive more than minimal risks or discomforts from your involvement in this study. That is, no risks beyond the risks associated with everyday life.	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	<br>	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	Benefits	1	h4	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	Although participation will not directly benefit you, we believe that the information will be useful in understanding on why L2 learners cannot attain native level of language proficiency. 	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	<br>	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	Privacy and Confidentiality	1	h4	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	The results of this research will be presented at academic conferences and academic journals. The results of this project will be coded in such a way that the participants identity will not be attached to the final form of this study. The researcher retains the right to use and publish non-identifiable data. While individual responses are confidential, aggregate data will be presented representing averages or generalizations about the responses as a whole. All data will be stored in password-protected computers in a secure location accessible only to the researcher team. Upon completion of the study, all information that matches up individual respondents with their answers including audio recordings will be kept in the lock-secured office for a period of five years from the date of publication.	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	<br>	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	Participation & Withdrawal	1	h4	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	Your participation is entirely voluntary. You are free to choose not to participate. Should you choose to participate, you can withdraw at any time during the study without consequences of any kind. Since the data is only linked to the subject number (not your name), we have no way to identify and withdraw your data from data analysis once you give consent and complete the study.	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	<br>	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	Questions about the Study	1	h4	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	If you have questions or concerns during the time of your participation in this study, or after its completion or you would like to receive a copy of the final aggregate results of this study, please contact:	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	<br>	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	Vivien (Kit Ying) Chan, Ph.D.	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	Assistant Professor	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	Department of Social and Behavioural Sciences	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	<br>	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	Academic 1 Y7419	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	City University of Hong Kong	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	Tat Chee Avenue, Kowloon, Hong Kong	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	Tel: +852 3442 7073	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	Email: vivien.chanky@cityu.edu.hk	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	<br>	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+checkConsent	By checking this box, you agree to take part in this study.	1	checkboxInput	NA	NA	NA	NA	NA	NA	1	isTRUE	750px	NA	NA	0
+NA	If you do not wish to proceed, simply close this page. 	1	p	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
+NA	<br>	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	750px	NA	NA	0
